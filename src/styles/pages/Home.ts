@@ -1,16 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   main {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
     section {
       h1 {
         font-size: 96px;
@@ -110,8 +106,15 @@ export const Container = styled.div`
           strong {
             color: ${props => props.theme.colors.primary}
           }
+          
         }
 
+      }
+      li {
+        padding: 16px 24px;
+        strong {
+            color: ${props => props.theme.colors.primary}; 
+        }
       }
     }
     #serviços {
@@ -126,8 +129,19 @@ export const Container = styled.div`
           flex-direction: column;
           align-items: center;
           text-align: center;
-          strong {}
-          p {}
+          padding: 48px 24px; 
+          strong {
+            color: ${props => props.theme.colors.primary};
+            font-weight: 700;
+            font-size: 18px; 
+            margin-bottom: 8px;
+          }
+          p {
+            color: ${props => props.theme.colors.primary};
+            font-size: 48px;
+            font-weight: 300; 
+            margin-bottom: 16px;
+          }
           span {}
         }
       }
@@ -135,7 +149,7 @@ export const Container = styled.div`
     #contatos {
       max-width: 650px;
       margin: 0 auto;
-
+      padding-bottom: 64px;
       ul {
         list-style: none;
         li {

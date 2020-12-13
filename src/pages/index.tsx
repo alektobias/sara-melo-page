@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
@@ -12,6 +12,7 @@ import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 const Home: React.FC = () => {
+  const [carouselIndex, setCarouselIndex] = useState(0)
   return (
     <Container>
       <Head>
@@ -54,7 +55,7 @@ const Home: React.FC = () => {
         <section id="depoimentos">
           <h2>Depoimentos</h2>
           <strong>Veja o que alguns depoimentos de clientes</strong>
-          <Carousel  plugins={['arrows']}>
+          <Carousel   plugins={['arrows']}>
             <div>
               <p>Sara, além de ser minha melhor amiga de anos, ela ainda é meu anjo da guarda sem asas, meu guia espiritual encarnado e a luz de esclarecimento do meu caminho.  Sara é taróloga e tem um dom fora do normal de lhe trazer discernimento em meio as atribuições rotineiras.</p>
               <strong>@mallorca</strong>
@@ -67,14 +68,18 @@ const Home: React.FC = () => {
               <p>Não posso dizer que tinha medo, mas apesar de acreditar em astrologia e muitas outras coisas, nunca tinha experimentado o tarot. Posso dizer que foi muito revelador e que me ajudou muito a me conhecer melhor. Quero também salientar o trabalho de Sara, sua técnica, sua leitura, simplesmente perfeitas.</p>
               <strong></strong>
             </div>
+            <Dots
+              value={carouselIndex}
+              onChange={setCarouselIndex}
+            />
           </Carousel>
         </section>
         <section id="serviços">
           <h2>Serviços</h2>
           <article>
             <div>
-              <strong>Consulta Online 30 Minutos</strong>
               <p>R$ 120</p>
+              <strong>Consulta Online 30 Minutos</strong>
               <span>
                 30 minutos de cosulta
                 <br/>
@@ -82,8 +87,8 @@ const Home: React.FC = () => {
               </span>
             </div>
             <div>
-              <strong>Consulta Online 60 Minutos</strong>
               <p>R$ 200</p>
+              <strong>Consulta Online 60 Minutos</strong>
               <span>
                 60 minutos de cosulta
                 <br/>
@@ -91,8 +96,8 @@ const Home: React.FC = () => {
               </span>
             </div>
             <div>
-              <strong>Consulta Presencial 60 minutos</strong>
               <p>R$ 250</p>
+              <strong>Consulta Presencial 60 minutos</strong>
               <span>
                 60 minutos de cosulta
                 <br/>
