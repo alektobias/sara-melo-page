@@ -21,7 +21,8 @@ export const Container = styled.div`
           color: ${props => props.theme.colors.primary};
           font-weight: 700;
           font-size: 48px;
-          margin-bottom: 16px;
+          max-width:650px;
+          margin: 0 auto 24px; 
         }
       h3 {
         font-size: 32px;
@@ -46,18 +47,25 @@ export const Container = styled.div`
       article {
         padding: 24px 0;
       }
+      h2{
+        
+      }
       .first {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-gap: 48px;
+      
+        p {
+          margin-bottom: 16px;
+          max-width: 650px;
+          line-height: 1.5em;
+          margin: 0 auto 16px;
+        }
       }
-      .second {
-        padding: 24px 256px;
-      }
+
       .third {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 48px;
+        max-width:1100px;
+        margin: 0 auto;
         div {  
           display: flex;
           flex-direction: column;
@@ -76,7 +84,68 @@ export const Container = styled.div`
         }
       }
       .fourth {
+        max-width: 650px;
+        margin: 0 auto 16px;
+        line-height: 1.5em;
+      }
+    }
+    #depoimentos {
+      max-width: 650px;
+      margin: 0 auto;
+      strong {
+        margin-bottom: 100px;
+      }
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 16px;
+        margin-top: 16px;
+        div {
+          padding: 16px;
+          p {
+            margin-bottom: 8px;
+            color: #333;
+            text-align: justify;
+          }
+          strong {
+            color: ${props => props.theme.colors.primary}
+          }
+        }
 
+      }
+    }
+    #serviços {
+      padding: 48px 0;
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1100px;
+        margin: 0 auto;
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          strong {}
+          p {}
+          span {}
+        }
+      }
+    }
+    #contatos {
+      max-width: 650px;
+      margin: 0 auto;
+
+      ul {
+        list-style: none;
+        li {
+          padding: 8px 16px;
+          a {
+            color: #000;
+            text-decoration: none;
+          }
+        }
+      
       }
     }
   }

@@ -11,7 +11,6 @@ const Menu: React.FC = () => {
             <Logo/>
             <h1>Sara Melo</h1>
           </div>
-          
           <ul>
             <li><Link href="#inicio">Home</Link></li>
             <li><Link href="#sobre">Sobre</Link></li>
